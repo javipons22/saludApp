@@ -5,14 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="js/fontawesome.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="style.css">
-    <title>SaludApp</title>
+    <title><?php wp_title(); ?></title>
+    <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class();?>>
     <div class="headerTop">
         <div class="container preNav">
             <span class="social" style="font-size: 17px; color: #aaa;">
@@ -54,32 +51,3 @@
             </div>
         </div>
     </header>
-    <div class="banner">
-        <div class="textoBanner">
-            <span>Solicita ahora</span>
-            <h1>Turnos Online disponibles</h1>
-            <a href="#" class="cta">Ver Más</a>
-        </div> 
-    </div>
-    <div class="contenido">
-        <div class="box box1">
-
-        </div>
-        <div class="box box2">
-
-        </div>
-        <div class="box box3">
-            <div class="columna1">
-                <h3>Portal de</h3>
-                <h2>Noticias</h2>
-            </div>
-            <div class="columna2">
-                <h4>última noticia</h3>
-                <p><span>"</span>La acción de la insulina está severamente dañada en los adipocitos de sujetos con sobrepeso y obesos aparentemente sanos"</p>
-            </div>
-            
-        </div>
-    </div>
-</body>
-
-</html>
