@@ -1,0 +1,190 @@
+/* ***************  CSS en General *************** */
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+.container {
+    max-width:1020px;
+    margin: 0 auto;
+}
+
+/* ***************  Header Top *************** */
+
+.headerTop {
+    background: #eee;
+    width: 100%;
+    border-top: 5px solid #5c94cf;
+}
+
+
+.preNav {
+    padding: 7px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social i {
+    margin-right:15px;
+}
+
+.info span {
+    margin-left: 20px;
+}
+
+
+.info span p {
+    color: #aaa;
+    display: inline-block;
+    font-size: 15px;
+}
+
+/* ***************  Header Principal *************** */
+
+header {
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    background-color: rgba(255,255,255,0.95)
+}
+
+.logo {
+    height: 35px;
+}
+
+.logo img {
+    height:100%;
+}
+
+.headerLogoMenu {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar nav ul {
+    display:flex;
+
+}
+
+.navbar nav ul li {
+    color: #666;
+    display:inline-block;
+    /* El padding que da el tamaño del header lo establecemos aca */
+    height: 80px;
+    width: 100px;
+    
+}
+
+.navbar nav ul li a {
+    height:100%;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    color: #666;
+    text-decoration: none;
+}
+
+.navbar nav ul li a:hover {
+    border-bottom: 4px solid #5c94cf; 
+    -webkit-transition: border-bottom 0.1s; /* Safari prior 6.1 */
+    transition: border-bottom 0.1s;
+    box-shadow: inset;
+    box-sizing: border-box;
+}
+
+
+/* ***************  Banner *************** */
+
+.banner {
+    height:700px;
+    background: url(background.jpg);
+    background-size:cover;
+    /* Usamos flexbox para que el h1 aparezca centrado */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoBanner h1 {
+    font-size:70px;
+    color: #fff;
+    font-weight:700;
+}
+
+.textoBanner span {
+    font-size:30px;
+    color: #5c94cf;
+}
+
+.cta {
+    color: #fff;
+    display:block;
+    font-size:20px;
+    padding: 10px 50px;
+    text-decoration: none;
+    background: #5c94cf;
+}
+
+/* ***************  Boxes index *************** */
+
+.contenido {
+    display:flex;
+}
+
+.box {
+    display:flex;
+    padding: 100px;
+}
+
+.box1 {
+    background-image:linear-gradient(rgba(117, 211, 255,0.8),rgba(117, 211, 255,0.8)),url('box1.jpeg');
+    background-size:cover;
+    width:100%;
+}
+
+.box2 {
+    background-image: linear-gradient(rgba(54, 123, 235,0.8),rgba(54, 123, 235,0.8)),url('box2.jpg');
+    background-size:cover;
+    width:100%;
+}
+
+.box3 {
+    background-image: linear-gradient(rgba(126, 76, 212,0.8),rgba(126, 76, 212,0.8)),url('box3.jpg');
+    background-size:cover;
+    width:100%;
+    display:flex;
+
+}
+
+.box h4 {
+    font-size: 25px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.box h3 {
+    font-size: 25px;
+}
+
+.box h2 {
+    font-size: 45px;
+    font-weight: 700;
+    color  : #fff;
+}
+
+.box .columna2 {
+    margin-left:20px;
+    color: #fff;
+}
+
+.columna2 p span {
+    font-size: 40px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display:inline-block;
+}
