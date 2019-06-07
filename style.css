@@ -102,7 +102,7 @@ header {
 
 .banner {
     height:700px;
-    background: url(background.jpg);
+    background: url('img/background.jpg');
     background-size:cover;
     /* Usamos flexbox para que el h1 aparezca centrado */
     display:flex;
@@ -142,19 +142,19 @@ header {
 }
 
 .box1 {
-    background-image:linear-gradient(rgba(117, 211, 255,0.8),rgba(117, 211, 255,0.8)),url('box1.jpeg');
+    background-image:linear-gradient(rgba(117, 211, 255,0.8),rgba(117, 211, 255,0.8)),url('img/box1.jpeg');
     background-size:cover;
     width:100%;
 }
 
 .box2 {
-    background-image: linear-gradient(rgba(54, 123, 235,0.8),rgba(54, 123, 235,0.8)),url('box2.jpg');
+    background-image: linear-gradient(rgba(54, 123, 235,0.8),rgba(54, 123, 235,0.8)),url('img/box2.jpg');
     background-size:cover;
     width:100%;
 }
 
 .box3 {
-    background-image: linear-gradient(rgba(126, 76, 212,0.8),rgba(126, 76, 212,0.8)),url('box3.jpg');
+    background-image: linear-gradient(rgba(126, 76, 212,0.8),rgba(126, 76, 212,0.8)),url('img/box3.jpg');
     background-size:cover;
     width:100%;
     display:flex;
