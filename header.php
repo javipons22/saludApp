@@ -37,15 +37,16 @@
     <header>
         <div class="container headerLogoMenu">
             <div class="logo">
-                <img src="img/logo.svg" alt="logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="logo">
             </div>
             <div class="navbar">
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Noticias</a></li>
+                        <li><a href="<?php echo get_site_url(); ?>">Home</a></li>
+                        <li><a href="<?php echo get_site_url(); ?>/noticias">Noticias</a></li>
                         <li><a href="#">Turnos</a></li>
-                        <li><a href="#">Login</a></li>
+                        <li><?php if(is_user_logged_in() == true){ echo '<a href="'.get_site_url().'/logout">LogOut</a>';}else{ echo '<a href="'.get_site_url().'/login">LogIn</a>';}   ?></li>
+                        <?php if(!is_user_logged_in() == true){ echo '<li><a id="linkSignUp" href="'.get_site_url().'/signup">Registrarse</a></li>';}?>
                     </ul>
                 </nav>
             </div>

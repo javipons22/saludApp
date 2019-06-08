@@ -94,6 +94,23 @@ header {
     
 }
 
+.navbar nav ul li:last-child {
+    
+}
+
+#linkSignUp {
+    margin-right:0;
+    padding-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    justify-content: flex-end;
+    color: #5c94cf;
+}
+
+#linkSignUp:hover {
+    border:none;
+}
+
 .navbar nav ul li a {
     height:100%;
     display:flex;
