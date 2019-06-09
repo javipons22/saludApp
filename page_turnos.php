@@ -6,16 +6,29 @@ Template Name: Lista Turnos
 ?>
 <?php get_header();?>
 
+<?php if (is_user_logged_in()):?>
+
 <?php
 
 $current_user = wp_get_current_user();
 
+// Hacemos un query que filtre por User ID y ordene por fechahoranum creado en page_crearturnos.php
 $args = array(
-    'numberposts' => -1,
     'post_type' => 'turnos',
-    'meta_key' => 'userid',
-    'meta_value' => get_current_user_id(),
+    'posts_per_page' => -1,
+    'meta_query' =>
+        array(
+            'key'       => 'userid',
+            'compare'   => '=',
+            'value'     => get_current_user_id()
+        ),
+    'meta_key'          => 'fechahoranum',
+    'type'              => 'numeric', 
+    'orderby'           => 'meta_value',
+    'order'             => 'ASC'
 );
+
+
 
 $query = new WP_Query($args);
 ?>
@@ -25,10 +38,10 @@ $query = new WP_Query($args);
     <th>FECHA</th>
     <th>HORA</th>
     <th>SERVICIO</th>
-    <th>DOCTOR</th>
+    <th>MEDICO</th>
   </tr>
 
-<?php if ($query->have_posts()): while ($query->have_posts()): $query->the_post();?>
+<?php if ($query->have_posts()): while ($query->have_posts()): $query->the_post(); ?>
 		        <?php
         echo "<tr>";
         echo "<td>"; the_field('fecha'); echo "</td>";
@@ -43,5 +56,8 @@ $query = new WP_Query($args);
 </table>
 
 <a class="ctaTurnos" href="<?php echo get_site_url(); ?>/crear-turnos">SOLICITAR TURNO</a>
+<?php else:?>
+    <p>Debes iniciar sesion</p>
+<?php endif;?>
 
 <?php get_footer();?>

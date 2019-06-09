@@ -3,6 +3,7 @@
 Template Name: SignUp
  */
 get_header();
+if (!is_user_logged_in()):
 global $wpdb;
 
 if ($_POST) {
@@ -116,5 +117,9 @@ if ($_POST) {
 			</p>
 
 </form>
+
+<?php else:?>
+    <p>Ya iniciaste Sesión (debes cerrar sesión para crear una cuenta nueva)</p>
+<?php endif;?>
 
 <?php get_footer();?>

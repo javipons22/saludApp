@@ -5,7 +5,7 @@ Template Name: Crear Turnos
 
 ?>
 <?php get_header();?>
-
+<?php if (is_user_logged_in()): ?>
 <?php
 global $wpdb;
 
@@ -27,6 +27,14 @@ if ($_POST) {
     $servicio = $wpdb->escape($_POST['servicio']);
     $doctor = $wpdb->escape($_POST['doctor']);
     $user_id = get_current_user_id();
+
+    // Obtenemos fecha y hora como numero para despues ordenarlos en page_turnos.php
+    $fecha_hora = $fecha . ' ' . $hora . ':00';
+    $format = "d/m/Y H:i:s";
+    $dateobj = DateTime::createFromFormat($format, $fecha_hora);
+    $iso_datetime = $dateobj->format(Datetime::ATOM);
+    $fecha_numero = strtotime($iso_datetime);
+
 
     // Obtenemos el objeto current user para pasar nombre y apellido de paciante en titulo del turno
     $current_user = wp_get_current_user();
@@ -52,11 +60,12 @@ if ($_POST) {
         update_field('fecha', $fecha, $post_id);
         update_field('hora', $hora, $post_id);
         update_field('userid', $user_id, $post_id);
+        update_field('fechahoranum', $fecha_numero, $post_id);
+        
 
         // Si no existe error o si existe error
         if (!is_wp_error($post_id)) {
             echo "Turno creado correctamente";
-            echo $servicio;
         } else {
             echo "Hubo errores al crear el turno";
         }
@@ -88,4 +97,7 @@ foreach ($doctores as $doctor) {
 <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Registrarse" />
 
 </form>
+<?php else: ?>
+    <p>Debes iniciar sesion</p>
+<?php endif;?>
 <?php get_footer();?>
