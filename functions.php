@@ -28,7 +28,7 @@ function remove_admin_bar()
 }
 
 // Agregar thumbnails a los posts
-add_theme_support ( 'post-thumbnails' );
+add_theme_support('post-thumbnails');
 
 //Esta funcion hace que se redireccione a la pagina de login cuando haya un error
 add_action('wp_login_failed', 'custom_login_fail'); // hook login fallido
@@ -56,7 +56,6 @@ function auto_redirect_after_login()
     exit();
 }
 
-
 // Si el usuario no es admin , prohibir la entrada al dashboard
 add_action('init', 'blockusers_init');
 
@@ -67,3 +66,5 @@ function blockusers_init()
         exit;
     }
 }
+
+?>

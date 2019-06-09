@@ -56,6 +56,7 @@ if ($_POST) {
         // Si no existe error o si existe error
         if (!is_wp_error($post_id)) {
             echo "Turno creado correctamente";
+            echo $servicio;
         } else {
             echo "Hubo errores al crear el turno";
         }
@@ -70,7 +71,7 @@ if ($_POST) {
 <?php
 // iteramos en el array servicios y creamos una opcion para cada uno
 foreach ($servicios as $servicio) {
-    echo "<option value=" . $servicio . ">" . $servicio . "</option>";
+    echo "<option value='" . $servicio . "'>" . $servicio . "</option>";
 }
 ?>
 </select>
@@ -78,7 +79,7 @@ foreach ($servicios as $servicio) {
 <?php
 // iteramos en el array servicios y creamos una opcion para cada uno
 foreach ($doctores as $doctor) {
-    echo "<option value=" . $doctor . ">" . $doctor . "</option>";
+    echo "<option value='" . $doctor . "'>" . $doctor . "</option>";
 }
 ?>
 </select>
