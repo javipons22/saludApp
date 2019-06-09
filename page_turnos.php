@@ -33,6 +33,7 @@ $args = array(
 $query = new WP_Query($args);
 ?>
 <h1 class="tituloTurnos">Próximos turnos del paciente: <span><?php echo $current_user->user_lastname . ' ' . $current_user->user_firstname;?></span></h1>
+<p>Los turnos estan ordenados de mas recientes a menos recientes</p>
 <table width="100%" class="tabla">
   <tr>
     <th>FECHA</th>

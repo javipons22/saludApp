@@ -65,7 +65,7 @@ if ($_POST) {
 
         // Si no existe error o si existe error
         if (!is_wp_error($post_id)) {
-            echo "Turno creado correctamente";
+            echo "<script>window.location.href = '". home_url() ."/turnos'</script>";
         } else {
             echo "Hubo errores al crear el turno";
         }
