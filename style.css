@@ -20,6 +20,7 @@ body {
 }
 
 
+
 .container {
     max-width:1020px;
     margin: 0 auto;
@@ -219,4 +220,42 @@ header {
     font-size: 40px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display:inline-block;
+}
+
+/* ***************  Noticias (single y page) *************** */
+.tituloNoticia {
+    font-size: 50px;
+    margin: 50px 0 0 0;
+    display:block;
+    border-bottom: 2px solid #5c94cf;
+
+}
+
+.containerNavegadorNoticias {
+    width:100%;
+    margin-top:5px;
+    margin-bottom: 50px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.containerNavegadorNoticias a {
+    padding: 3px 10px;
+    background-color: #5c94cf;
+    color: #fff;
+    text-decoration: none;
+    border-radius:4px;
+}
+
+.containerContenidoNoticias {
+    display:flex;
+}
+
+.noticiaImagen {
+    flex-basis:25%;
+}
+
+.containerContenidoNoticias img {
+    width:100%;
+    object-fit: contain;
 }

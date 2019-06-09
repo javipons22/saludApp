@@ -44,7 +44,7 @@
                     <ul>
                         <li><a href="<?php echo get_site_url(); ?>">Home</a></li>
                         <li><a href="<?php echo get_site_url(); ?>/noticias">Noticias</a></li>
-                        <li><a href="#">Turnos</a></li>
+                        <li><a href="<?php echo get_site_url(); ?>/turnos">Turnos</a></li>
                         <li><?php if(is_user_logged_in() == true){ echo '<a href="'.get_site_url().'/logout">LogOut</a>';}else{ echo '<a href="'.get_site_url().'/login">LogIn</a>';}   ?></li>
                         <?php if(!is_user_logged_in() == true){ echo '<li><a id="linkSignUp" href="'.get_site_url().'/signup">Registrarse</a></li>';}?>
                     </ul>
@@ -52,3 +52,12 @@
             </div>
         </div>
     </header>
+<?php
+
+global $post;
+$id_pagina = $post->ID;
+// Si el ID no es 1 osea no es index.php mostrar container si es index no mostrar container (pantalla completa)
+if($id_pagina !== 1){
+    echo "<div class='container'>";
+}
+?>

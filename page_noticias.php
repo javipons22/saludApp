@@ -15,7 +15,9 @@ $query = new WP_Query($args);
 ?>
 <?php if ($query->have_posts()): while ($query->have_posts()): $query->the_post();?>
 		<?php the_title();
-        the_content();?>
+        the_content();
+        echo get_the_date();
+        ?>
 		<?php endwhile;else: ?>
 	<p><?php esc_html_e('Sorry, no posts matched your criteria.');?></p>
 <?php endif;?>

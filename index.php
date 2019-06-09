@@ -1,10 +1,13 @@
-<?php get_header();?>
+<?php 
+get_header();
+$dont_show_container = true;
+?>
 
     <div class="banner">
         <div class="textoBanner">
             <span>Solicita ahora</span>
             <h1>Turnos Online disponibles</h1>
-            <a href="#" class="cta">Ver Más</a>
+            <a href="<?php echo get_site_url(); ?>/turnos" class="cta">Ver Más</a>
         </div>
     </div>
     <div class="contenido">
