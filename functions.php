@@ -4,8 +4,10 @@ function wpt_theme_styles()
 { //wpt es un nombre dado por nosotros para diferenciar con otros plugins
     wp_enqueue_style('date_picker_css', get_template_directory_uri() . '/css/jquery.datetimepicker.min.css');
     wp_enqueue_style('reset_css', get_template_directory_uri() . '/css/reset.css');
+    wp_enqueue_style('hamb_icon_css', get_template_directory_uri() . '/css/hamb-icon.css');
     wp_enqueue_style('fuentegoogle', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap');
     wp_enqueue_style('main_css', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('laptop_css', get_template_directory_uri() . '/css/laptop.css');
 }
 add_action('wp_enqueue_scripts', 'wpt_theme_styles');
 

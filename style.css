@@ -17,13 +17,24 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+    align-items: stretch;
 }
+
+
+.contentWrapper {
+    flex-grow:1;
+}
+
 
 
 
 .container {
     max-width:1020px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* ***************  Header Top *************** */
@@ -32,6 +43,7 @@ body {
     background: #eee;
     width: 100%;
     border-top: 5px solid #5c94cf;
+    display:none;
 }
 
 
@@ -39,6 +51,11 @@ body {
     padding: 7px 0;
     display: flex;
     justify-content: space-between;
+}
+
+.containerPreNav {
+    max-width:1020px;
+    margin: 0 auto;
 }
 
 .social i {
@@ -67,7 +84,7 @@ header {
 }
 
 .logo {
-    height: 35px;
+    height: 50px;
 }
 
 .logo img {
@@ -78,56 +95,75 @@ header {
     display:flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap:wrap;
+    padding: 15px 25px;
 
+}
+
+.navbar {
+    display:none;
+    margin: 50px 0;
 }
 
 .navbar nav ul {
     display:flex;
+    flex-direction: column;
+    flex-basis: 100%;
+
+}
+
+.logo {
+    order:1;
+    display:flex;
+    flex-basis:49%;
+    justify-content: flex-start;
+    
+}
+
+.menu-wrapper {
+    order:2;
+    display:flex;
+    flex-basis: 49%;
+    justify-content:flex-end;
+}
+
+.navbar {
+    order:3;
+    flex-basis: 100%;
 
 }
 
 .navbar nav ul li {
     color: #666;
-    display:inline-block;
+    display:block;
     /* El padding que da el tamaño del header lo establecemos aca */
-    height: 80px;
-    width: 100px;
+    width: 100%;
+    margin: 20px 0;
     
 }
 
-.navbar nav ul li:last-child {
-    
-}
 
 #linkSignUp {
     margin-right:0;
     padding-right: 0;
     margin-left: 0;
     padding-left: 0;
-    justify-content: flex-end;
+    justify-content: flex-start;
     color: #5c94cf;
 }
 
-#linkSignUp:hover {
-    border:none;
-}
+
 
 .navbar nav ul li a {
     height:100%;
     display:flex;
     flex-direction: row;
     align-items:center;
-    justify-content: center;
+    justify-content: flex-start;
     color: #666;
     text-decoration: none;
-}
-
-.navbar nav ul li a:hover {
-    border-bottom: 4px solid #5c94cf; 
-    -webkit-transition: border-bottom 0.1s; /* Safari prior 6.1 */
-    transition: border-bottom 0.1s;
-    box-shadow: inset;
-    box-sizing: border-box;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #5c94cf; 
 }
 
 
@@ -141,6 +177,10 @@ header {
     display:flex;
     justify-content: center;
     align-items: center;
+}
+
+.textoBanner {
+    padding: 0 25px;
 }
 
 .textoBanner h1 {
@@ -167,29 +207,27 @@ header {
 
 .contenido {
     display:flex;
+    flex-direction:column;
 }
 
 .box {
     display:flex;
-    padding: 100px;
+    padding: 25px;
 }
 
 .box1 {
     background-image:linear-gradient(rgba(117, 211, 255,0.8),rgba(117, 211, 255,0.8)),url('img/box1.jpeg');
     background-size:cover;
-    width:100%;
 }
 
 .box2 {
     background-image: linear-gradient(rgba(54, 123, 235,0.8),rgba(54, 123, 235,0.8)),url('img/box2.jpg');
     background-size:cover;
-    width:100%;
 }
 
 .box3 {
     background-image: linear-gradient(rgba(126, 76, 212,0.8),rgba(126, 76, 212,0.8)),url('img/box3.jpg');
     background-size:cover;
-    width:100%;
     display:flex;
 
 }
@@ -211,9 +249,14 @@ header {
     color  : #fff;
 }
 
+.box .columna1 {
+    flex-basis:35%;
+}
+
 .box .columna2 {
     margin-left:20px;
     color: #fff;
+    flex-basis: 60%;
 }
 
 .columna2 p span {
@@ -247,18 +290,76 @@ header {
     border-radius:4px;
 }
 
-.containerContenidoNoticias {
-    display:flex;
-}
 
 .noticiaImagen {
     flex-basis:25%;
 }
 
-.containerContenidoNoticias img {
-    width:100%;
+.containerContenidoNoticias p {
+
+    margin: 25px 0;
+
+}
+
+.containerContenidoNoticias p img {
+    float: right;
+    margin: 10px;
+    width: 35%;
+}
+
+.contenedorNoticia {
+    margin-bottom: 65px;
+}
+
+.noticia {
+    display:block;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.16);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.16);
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.noticia .imagen {
+    flex-basis: 25%;
+}
+
+.noticia .imagen img {
+    width: 100%;
     object-fit: contain;
 }
+
+.contenido-noticia {
+    flex-basis: 80%;
+    margin: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenido-noticia h1 {
+    font-size: 40px;
+    border-bottom: 2px solid #5c94cf;
+}
+
+.contenido-noticia p {
+    margin-top: 25px;
+    flex-grow: 1;
+}
+
+.noticia-info {
+    display:flex;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+.noticia-info a {
+    text-decoration:none;
+    padding: 15px;
+    background-color: #5c94cf;
+    color: #fff;
+}
+
 /* ***************  Pagina *************** */
 
 .tituloTurnos {
@@ -321,3 +422,34 @@ tr:last-child {
     text-align:center;
 }
 
+/* ***************  Footer *************** */
+
+footer {
+    background: #eee;
+}
+
+footer .container > span {
+    color: #aaa;
+    display:block;
+    text-align:center;
+}
+
+.navbar-footer {
+    color: #aaa;
+}
+
+.navbar-footer a {
+    color: #aaa;
+    text-decoration:none;
+}
+
+
+.navbar-footer ul li{
+    margin: 10px 0;
+}
+
+.navbar-footer ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

@@ -11,7 +11,7 @@
 
 <body <?php body_class();?>>
     <div class="headerTop">
-        <div class="container preNav">
+        <div class="containerPreNav preNav">
             <span class="social" style="font-size: 17px; color: #aaa;">
                 <i class="fab fa-facebook-f"></i>
                 <i class="fab fa-instagram"></i>
@@ -50,8 +50,12 @@
                     </ul>
                 </nav>
             </div>
+            <div class="menu-wrapper">
+                <div class="hamburger-menu"></div>
+            </div>  
         </div>
     </header>
+    <div class="contentWrapper">
 <?php
 
 global $post;

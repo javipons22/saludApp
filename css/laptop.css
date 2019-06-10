@@ -1,0 +1,105 @@
+@media only screen and (min-width: 1020px) {
+    
+    .headerLogoMenu {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:0;
+    
+    }
+
+    .container {
+        padding:0;
+    }
+    
+    .navbar nav ul {
+        display:flex;
+        flex-direction: row;
+    
+    }
+
+    .navbar {
+        display:inline-block;
+        flex-basis: auto;
+        margin: 0;
+    }
+
+    .logo {
+        flex-basis: auto; 
+    }
+
+    .headerTop {
+        display:block;
+        background: #eee;
+        width: 100%;
+        border-top: 5px solid #5c94cf;
+    }
+
+    .menu-wrapper {
+        display:none;
+    }
+
+    .navbar nav ul li {
+        color: #666;
+        display:inline-block;
+        /* El padding que da el tamaño del header lo establecemos aca */
+        height: 80px;
+        width: 100px;
+        margin: 0;
+        
+    }
+
+    #linkSignUp {
+        margin-right:0;
+        padding-right: 0;
+        margin-left: 0;
+        padding-left: 0;
+        justify-content: flex-end;
+        color: #5c94cf;
+    }
+
+    #linkSignUp:hover {
+        border:none;
+    }
+    
+    .navbar nav ul li a {
+        height:100%;
+        display:flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content: center;
+        color: #666;
+        text-decoration: none;
+        padding-bottom: 0;
+        border:none;
+    }
+
+    .navbar nav ul li a:hover {
+        border-bottom: 4px solid #5c94cf; 
+        -webkit-transition: border-bottom 0.1s ease; /* Safari prior 6.1 */
+        transition: border-bottom 0.1s ease;
+        box-shadow: inset;
+        box-sizing: border-box;
+    }
+
+    .textoBanner {
+        padding: 0;
+    }
+
+    .contenido {
+        flex-direction: row;
+    }
+
+    .box {
+        display:flex;
+        padding: 100px;
+    }
+
+    .box1 , .box2, .box3 {
+        width:100%;
+    }
+
+    .columna1, .columna2 {
+        flex-basis: auto;
+    }
+}

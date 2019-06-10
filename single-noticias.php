@@ -2,13 +2,15 @@
 
 <?php if (is_user_logged_in()): ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<div class="contenedorNoticia">
 <h1 class="tituloNoticia"><?php the_title();?></h1>
 <div class="containerNavegadorNoticias">
 <?php previous_post_link('%link','Noticia Anterior'); ?> <?php next_post_link('%link','Noticia Siguiente');?>
 </div>
 <div class="containerContenidoNoticias">
-	<div class="noticiaImagen"><?php the_post_thumbnail(); ?></div>
-	<p><?php the_content();?></p>
+	<p><img src="<?php the_field('imagen');?>" alt="imagen <?php the_title(); ?>"><?php the_content();?></p>
+	<p><?php echo get_the_date();?></p>
+</div>
 </div>
 
 <?php endwhile; else : ?>
