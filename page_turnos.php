@@ -58,7 +58,7 @@ $query = new WP_Query($args);
 
 <a class="ctaTurnos" href="<?php echo get_site_url(); ?>/crear-turnos">SOLICITAR TURNO</a>
 <?php else:?>
-    <p>Debes iniciar sesion</p>
+<?php echo "<script>window.location.href = '". home_url() ."/login'</script>"; ?>
 <?php endif;?>
 
 <?php get_footer();?>

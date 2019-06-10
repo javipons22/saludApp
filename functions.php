@@ -13,7 +13,7 @@ add_action('wp_enqueue_scripts', 'wpt_theme_styles');
 
 function wpt_theme_js()
 {
-    wp_enqueue_script('fontawesome_js', get_template_directory_uri() . '/js/fontawesome.js', '', '', false); //el ultimo parametro es dependence , version y si debe aparecer en el footer(false)
+    wp_enqueue_script('fontawesome_js', get_template_directory_uri() . '/js/all.js', '', '', false); //el ultimo parametro es dependence , version y si debe aparecer en el footer(false)
     wp_enqueue_script('date_picker_js', get_template_directory_uri() . '/js/jquery.datetimepicker.full.min.js', array('jquery'), '', true);
     wp_enqueue_script('app_js', get_template_directory_uri() . '/js/app.js', array('jquery'), '', true);
 }
@@ -36,12 +36,14 @@ add_theme_support('post-thumbnails');
 add_action('wp_login_failed', 'custom_login_fail'); // hook login fallido
 function custom_login_fail($username)
 {
+    echo "error";/*
     $referrer = $_SERVER['HTTP_REFERER']; // de donde vino la sumision de login?
     // si hay un refferer valido y esta no es la ventana de login de wordpress
     if (!empty($referrer) && !strstr($referrer, 'wp-login') && !strstr($referrer, 'wp-admin')) {
         wp_redirect(home_url() . '/login/?login=failed'); // ponemos un querystring que agarramos con $_GET en el sitio por si hay error
         exit;
     }
+    */
 }
 
 add_action('wp_logout', 'auto_redirect_after_logout');
@@ -69,5 +71,3 @@ function blockusers_init()
     }
 }
 
-
-?>

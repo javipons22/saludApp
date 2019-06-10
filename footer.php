@@ -5,32 +5,31 @@ if ($id_pagina !== 1) {
 }
 ?>
 </div>
+<div class="headerTop">
+    <div class="containerPreNav preNav">
+        <span class="social" style="font-size: 17px; color: #aaa;">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin-in"></i>
+         </span>
+         <span class="info">
+             <span style="font-size: 17px; color: #5FD3ED;">
+                <i class="fas fa-map-marker-alt"></i>
+                 <p>Humberto Primo 7655</p>
+             </span>
+                <span style="font-size: 17px; color: #5FD3ED;">
+                    <i class="fas fa-phone"></i>
+                    <p>(0351) 442754</p>
+             </span>
+             <span style="font-size: 17px; color: #5FD3ED;">
+                 <i class="far fa-envelope"></i>
+                 <p>info@saludapp.com</p>
+            </span>
+         </span>
+    </div>
+</div>
 <footer>
-    
-        <div class="headerTop">
-            <div class="containerPreNav preNav">
-                <span class="social" style="font-size: 17px; color: #aaa;">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-linkedin-in"></i>
-                </span>
-                <span class="info">
-                    <span style="font-size: 17px; color: #5FD3ED;">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Humberto Primo 7655</p>
-                    </span>
-                    <span style="font-size: 17px; color: #5FD3ED;">
-                        <i class="fas fa-phone"></i>
-                        <p>(0351) 442754</p>
-                    </span>
-                    <span style="font-size: 17px; color: #5FD3ED;">
-                        <i class="far fa-envelope"></i>
-                        <p>info@saludapp.com</p>
-                    </span>
-                </span>
-            </div>
-        </div>
         
         <div class="container">
             <div class="navbar-footer">

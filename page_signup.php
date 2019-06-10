@@ -101,7 +101,7 @@ if ($_POST) {
 			</p>
             <p class="register-email">
 				<label for="user_email">E-mail</label>
-				<input type="text" name="email" id="user_email" class="input" value="" size="30" />
+				<input type="email" name="email" id="user_email" class="input" value="" size="30" />
 			</p>
 			<p class="register-password">
 				<label for="user_pass">Contraseña</label>

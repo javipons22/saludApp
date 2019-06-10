@@ -31,6 +31,6 @@ $query = new WP_Query($args);
 	<p><?php esc_html_e('Sorry, no posts matched your criteria.');?></p>
 <?php endif;?>
 <?php else: ?>
-    <p>Debes iniciar sesion</p>
+<?php echo "<script>window.location.href = '". home_url() ."/login'</script>"; ?>
 <?php endif;?>
 <?php get_footer();?>

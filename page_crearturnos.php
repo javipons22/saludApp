@@ -98,6 +98,6 @@ foreach ($doctores as $doctor) {
 
 </form>
 <?php else: ?>
-    <p>Debes iniciar sesion</p>
+<?php echo "<script>window.location.href = '". home_url() ."/login'</script>"; ?>
 <?php endif;?>
 <?php get_footer();?>
