@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Crear Turnos
-*/
+ */
 
 ?>
 <?php get_header();?>
@@ -35,7 +35,6 @@ if ($_POST) {
     $iso_datetime = $dateobj->format(Datetime::ATOM);
     $fecha_numero = strtotime($iso_datetime);
 
-
     // Obtenemos el objeto current user para pasar nombre y apellido de paciante en titulo del turno
     $current_user = wp_get_current_user();
 
@@ -61,11 +60,10 @@ if ($_POST) {
         update_field('hora', $hora, $post_id);
         update_field('userid', $user_id, $post_id);
         update_field('fechahoranum', $fecha_numero, $post_id);
-        
 
         // Si no existe error o si existe error
         if (!is_wp_error($post_id)) {
-            echo "<script>window.location.href = '". home_url() ."/turnos'</script>";
+            echo "<script>window.location.href = '" . home_url() . "/turnos'</script>";
         } else {
             echo "Hubo errores al crear el turno";
         }
@@ -76,28 +74,47 @@ if ($_POST) {
 }
 ?>
 <form method="post" autocomplete="off">
-<select name="servicio">
-<?php
-// iteramos en el array servicios y creamos una opcion para cada uno
-foreach ($servicios as $servicio) {
-    echo "<option value='" . $servicio . "'>" . $servicio . "</option>";
-}
-?>
-</select>
-<select name="doctor">
-<?php
-// iteramos en el array servicios y creamos una opcion para cada uno
-foreach ($doctores as $doctor) {
-    echo "<option value='" . $doctor . "'>" . $doctor . "</option>";
-}
-?>
-</select>
-<input id="datepicker" type="text" name="fecha" >
-<input id="timepicker" type="text" name="hora" >
-<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="Registrarse" />
+        <p>
+				<label for="servicio">Seleccione un área</label>
+				<select name="servicio" id="servicio">
+                    <?php
+                    // iteramos en el array servicios y creamos una opcion para cada uno
+                    foreach ($servicios as $servicio) {
+                        echo "<option value='" . $servicio . "'>" . $servicio . "</option>";
+                    }
+                    ?>
+                </select>
+        </p>
+        <p>
+				<label for="doctor">Seleccione un médico</label>
+				<select name="doctor" id="doctor">
+                <?php
+                    // iteramos en el array servicios y creamos una opcion para cada uno
+                    foreach ($doctores as $doctor) {
+                        echo "<option value='" . $doctor . "'>" . $doctor . "</option>";
+                    }
+                    ?>
+                </select>
+        </p>
+        <p>
+				<label for="fecha">Seleccione Fecha</label>
+				<input id="datepicker" type="text" name="fecha" id="fecha">
+        </p>
+        <p>
+				<label for="fecha">Seleccione Hora</label>
+				<input id="timepicker" type="text" name="hora" id="hora" >
+        </p>
+        <p>
+            <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary" value="solicitar turno" />
+        </p>
+
+
+
+
+
 
 </form>
 <?php else: ?>
-<?php echo "<script>window.location.href = '". home_url() ."/login'</script>"; ?>
+<?php echo "<script>window.location.href = '" . home_url() . "/login'</script>"; ?>
 <?php endif;?>
 <?php get_footer();?>

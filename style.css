@@ -28,6 +28,13 @@ body {
     flex-grow:1;
 }
 
+.error {
+    background: rgba(247, 64, 64,0.5);
+    color: red;
+    display: block;
+    width:100%;
+    padding:10px;
+}
 
 
 
@@ -338,7 +345,7 @@ header {
 }
 
 .contenido-noticia h1 {
-    font-size: 40px;
+    font-size: 27px;
     border-bottom: 2px solid #5c94cf;
 }
 
@@ -363,7 +370,7 @@ header {
 /* ***************  Pagina *************** */
 
 .tituloTurnos {
-    font-size: 50px;
+    font-size: 30px;
     margin: 50px 0 60px 0;
     display:block;
     border-bottom: 2px solid #5c94cf;
@@ -371,7 +378,7 @@ header {
 }
 
 .tituloTurnos span {
-    font-size: 42px;
+    font-size: 22px;
 }
 
 /* ***************  Tabla turnos *************** */
@@ -434,11 +441,21 @@ form p label {
     width:100%;
 }
 
+form p {
+    margin-bottom: 25px;
+}
+
 form p input {
     display:inline-block;
     width:100%;
     padding:5px;
-    margin-bottom: 25px;
+    
+}
+
+form select {
+    background: #ddd;
+    border: 1px solid #ccc;
+    padding: 5px;
 }
 
 .login-remember label, .login-remember label input {
@@ -456,6 +473,20 @@ form p input {
 
 #rememberme {
     display:inline-block;
+}
+
+#wp-submit {
+    background: #5FD3ED;
+    padding: 15px 25px;
+    color:#000;
+    text-decoration: none;
+    border-radius: 4px;
+    display:block;
+    text-align:center;
+    cursor:pointer;
+    border:none;
+    font-weight:bold;
+    text-transform: uppercase;
 }
 
 /* ***************  Footer *************** */

@@ -72,7 +72,9 @@ if ($_POST) {
         }
     } else {
 
-        print_r($error);
+        foreach ($error as $errores) {
+            echo '<p class="error">'. $errores .'</p>'; 
+        }
 
     }
 }

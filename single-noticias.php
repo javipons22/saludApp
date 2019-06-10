@@ -1,6 +1,5 @@
 <?php get_header();?>
 
-<?php if (is_user_logged_in()): ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <div class="contenedorNoticia">
 <h1 class="tituloNoticia"><?php the_title();?></h1>
@@ -17,8 +16,6 @@
 	<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
 
-<?php else:?>
-<?php echo "<script>window.location.href = '". home_url() ."/login'</script>"; ?>
-<?php endif;?>
+
 
 <?php get_footer();?>

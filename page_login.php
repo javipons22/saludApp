@@ -9,7 +9,7 @@ if (is_user_logged_in() == true) {
     echo "ya iniciaste sesion!";
 } else {
     if ($_GET['login'] == 'failed') {
-        echo 'error';
+        echo '<p class="error">Error , intente nuevamente</p>';
     }
     
     $args = array(
